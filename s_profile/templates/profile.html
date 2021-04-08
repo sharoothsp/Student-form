@@ -1,0 +1,17 @@
+<a href="/home">Home</a>
+<a href="/details">View profiles</a>
+
+<h1>Create new profile</h1>
+<form  method='POST'>
+  {% csrf_token %}
+  <label for="fname">First name:</label>
+    {{ form.First_name }}
+    <label for="lname">Last name:</label>
+    {{ form.Last_name }}
+    <br><br>
+    <label for="fname">Reg No:</label>
+  {{ form.Reg_No }}
+  <label for="lname">phone number</label>
+  {{ form.Phone_number }}
+<button type='submit'>Save</button>
+</form>

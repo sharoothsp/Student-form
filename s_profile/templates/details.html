@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href="/home">Home</a>
+    <a href="/profile">Create profile</a>
+    <h1>Search by name</h1>
+    <form method="POST">
+      {% csrf_token %}
+      <label for="search"></label>
+      {{ Sform.search }}
+
+    <button type='submit'>Search</button>
+    </form>
+    
+    <h3>
+
+
+
+
+    {{ D.First_name }}
+    {% for x in D %}
+    First name :   {{ x.First_name }}
+    <br>
+    Last name :  {{ x.Last_name }}
+    <br>
+    Reg No    :  {{ x.Reg_No }}
+    <br>
+    Phone number: {{ x.Phone_number }}
+    {% endfor %}
+
+
+  </h3>
+
+
+  </body>
+</html>
